@@ -1,0 +1,16 @@
+package Exercise4point6;
+//super class
+public class Fruit {
+protected String name;
+	
+    //constructor with no argument
+	public Fruit() {
+		this.name = " ";
+	}
+	
+	//constructor with 1 argument
+	public Fruit(String n) {
+		this.name = n;
+		System.out.println("Fruit constructor is invoked");
+	}
+}
