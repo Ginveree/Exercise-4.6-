@@ -1,0 +1,57 @@
+package Exercise4point6;
+
+public class Apple extends Fruit {
+	protected double price;
+	protected int quantity;
+
+	public Apple(String n, int q, double p) {//constructor for sub class with 2 arguments
+		super(n);
+		this.price = p;
+		this.quantity = q;
+		
+		Prices pp = new FTotalPrice();
+		
+		if(this.quantity < 10) {
+			System.out.println("Quantity\t\t: " + this.quantity);
+			System.out.printf("%s%.2f\n","Price for 1\t\t: RM ",this.price);
+			System.out.printf("%s%.2f\n","Total price\t\t: RM ",pp.totalP(p, q));
+		}
+		
+		else if(this.quantity > 10 && this.quantity < 100) {
+			double pP = 2.50; //set price to RM2.50
+			System.out.println("Quantity\t\t: " + this.quantity);
+			System.out.printf("%s%.2f\n","Price for 1\t\t: RM ",pP);
+			System.out.printf("%s%.2f\n","Total price\t\t: RM ",pp.totalP(pP, q));
+		}
+		
+		else {
+			double pP = 2.50; //set price to RM2.50
+			double d = 0.80; //set discount 20%
+			//Apples
+			if ((n.equals("Apple")) || (n.equals("Green Apple")) || (n.equals("Red Apple"))) {
+				Discount aD = new AppleDiscount(); //aD is apple discount
+				d = aD.rateOfDiscount();
+				
+				System.out.println("Quantity\t\t: " + this.quantity);		
+				System.out.printf("%s%.2f\n","Price for 1\t\t: RM ",pP);
+				System.out.printf("%s%.2f\n","Total price\t\t: RM ",pp.totalP(pP, q, d));
+			}
+			//Banana
+			else if ((n.equals("Banana"))) {
+				Discount bD = new BananaDiscount(); //aB is banana discount
+				d = bD.rateOfDiscount();
+				
+				System.out.println("Quantity\t\t: " + this.quantity);
+				System.out.printf("%s%.2f\n","Price for 1\t\t: RM ",pP);
+				System.out.printf("%s%.2f\n","Total price\t\t: RM ",pp.totalP(pP, q, d));
+			}
+		}		
+	}
+	
+	
+	//overriding method
+	public String toString() {
+		return ("Thank you!\n");
+	}
+
+}
