@@ -1,0 +1,38 @@
+package Exercise4point6;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//Fruit
+		System.out.println("**************Fruit*****************");
+		Fruit objF = new Fruit("Fruit\n");	
+		System.out.println();
+		
+		//Orange
+		System.out.println("**************Orange*****************");
+		Orange objO = new Orange(200,3,'M');
+		System.out.println(objO.toString());
+		
+		//Banana
+		System.out.println("**************Banana*****************");
+		Banana objB = new Banana("Banana",300,4,3);
+		System.out.println(objB.toString());
+		
+		//Apple
+		System.out.println("***************Apple*****************");
+		Apple objA = new Apple("Apple",9,3.20);
+		System.out.println(objA.toString());
+        
+		//Red Apple
+		System.out.println("*************Red Apple***************");
+		RedApple objR = new RedApple("Red Apple",200,3.10);
+		System.out.println(objR.toString());
+
+		//Green Apple
+		System.out.println("************Green Apple**************");
+		GreenApple objG = new GreenApple("Green Apple",50,3.50);
+		System.out.println(objG.toString());
+
+	}
+
+}
