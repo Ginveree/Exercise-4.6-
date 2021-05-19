@@ -1,0 +1,15 @@
+package Exercise4point6;
+
+public class FTotalPrice implements Prices {
+	
+	//method in Prices
+	public double totalP (double pP, int q) {
+		return pP * q;
+	}
+	
+	//method in Prices
+	public double totalP (double pP, int q, double d) {
+		return pP * q * d;
+	}
+
+}
