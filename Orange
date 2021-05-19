@@ -1,0 +1,47 @@
+package Exercise4point6;
+
+//sub class for Fruit
+public class Orange extends Fruit {
+	double v1, v2;
+    int quantity;
+	private char size;
+	
+	public Orange(double v, int q, char s) {//constructor for sub class with 3 arguments
+		this.v1 = v;
+		this.quantity = q;
+		this.size= s;
+		
+		switch(this.size) {
+		case 'S': totalVitamin();
+		          System.out.println("Quantity\t\t: " + this.quantity);
+		          System.out.printf("%s%.2f\n","Total vitamin\t\t: ",totalVitamin());
+		          break;
+		case 'M': v2 = 225;
+		          totalVitamin(v2);
+		          System.out.println("Quantity\t\t: " + this.quantity);
+		          System.out.printf("%s%.2f\n","Total vitamin\t\t: ",totalVitamin(v2));
+		          break;
+		case 'L': v2 = 255;
+                  totalVitamin(v2);
+                  System.out.println("Quantity\t\t: " + this.quantity);
+                  System.out.printf("%s%.2f\n","Total vitamin\t\t: ",totalVitamin(v2));
+                  break;
+		}
+	}
+	
+	//overloading method with no parameter
+	public double totalVitamin() {
+		return this.v1 * this.quantity;
+	}
+	
+	//overloading method with 1 parameter
+	public double totalVitamin(double v2) {
+		return this.v2 * this.quantity;
+	}
+	
+	//overriding method
+	public String toString() {
+		return ("Thank you!\n");
+	}
+
+}
