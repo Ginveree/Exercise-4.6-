@@ -1,0 +1,17 @@
+package Exercise4point6;
+//abstract class implements interface
+
+//apple discount
+    class AppleDiscount implements Discount {
+	    public float rateOfDiscount() {
+		return 0.10f;
+	    }
+	}
+    
+    //banana discount
+    class BananaDiscount implements Discount {
+		public float rateOfDiscount() {
+			return 0.05f;
+		}
+	}
+    
