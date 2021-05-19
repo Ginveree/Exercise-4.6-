@@ -1,0 +1,27 @@
+package Exercise4point6;
+
+//sub class for Fruit
+public class Banana extends Apple {
+	private int days;
+	
+	public Banana(String n, double p, int q, int day) {//constructor for sub class 
+		super(n,q,p);
+		this.days = day;	
+		
+		if (this.days <= 3) 
+			System.out.println("The bananas are very fresh!");
+
+		else if (this.days > 3 && this.days <= 6) 
+			System.out.println("The bananas are still edible.");
+		
+		else 
+			System.out.println("The bananas are overripe!");
+
+	}
+	
+	//overriding method
+	public String toString() {
+		return ("Please come again!\n");
+	}
+
+}
