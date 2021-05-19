@@ -1,0 +1,9 @@
+package Exercise4point6;
+
+public interface Prices {//heading method without body
+	
+	double totalP (double pP, int q); 
+	
+	double totalP (double pP, int q, double d);
+
+}
